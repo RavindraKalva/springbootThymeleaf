@@ -19,5 +19,9 @@ public class EmployeeServiceImpl implements EmployeeService{
 		return emprepo.findAll();
 		
 	}
+	public void saveEmployee(Employee emp)
+	{
+		emprepo.save(emp);
+	}
 
 }
