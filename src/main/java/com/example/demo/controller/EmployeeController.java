@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.model.Employee;
@@ -33,6 +34,13 @@ public class EmployeeController {
 	{
 		empservice.saveEmployee(employee);
 		return "redirect:/";
+	}
+	@GetMapping("/showFormForUpdate/{eid}")
+	public String showFormForUpdate(@PathVariable (value="eid")long eid,Model model)
+	{
+		Employee employee=empservice.getEmployeeById(eid);
+		model.addAttribute("employee",employee);
+		return "update_form";
 	}
 
 }

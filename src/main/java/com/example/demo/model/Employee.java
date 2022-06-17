@@ -11,7 +11,7 @@ public class Employee {
 	
 	@Id
 	
-	private Integer eid;
+	private Long eid;
 	@Column(name="ename")
 	private String ename;
 	@Column(name="salary")
@@ -20,10 +20,10 @@ public class Employee {
 	private String designation;
 	@Column(name="department")
 	private String department;
-	public Integer getEid() {
+	public Long getEid() {
 		return eid;
 	}
-	public void setEid(Integer eid) {
+	public void setEid(Long eid) {
 		this.eid = eid;
 	}
 	public String getEname() {
