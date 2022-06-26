@@ -43,4 +43,8 @@ public class EmployeeController {
 		return "update_form";
 	}
 
+	public void doProcess()
+	{
+	}
+
 }
